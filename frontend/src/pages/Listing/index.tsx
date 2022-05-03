@@ -21,15 +21,21 @@ function Listing() {
   });
 
   useEffect(() => {
-    axios.get(`${BASE_URL}/movies?size=12&page=${pageNumber}&sort=title`).then((resp) => {
-      const data = resp.data as MoviePage;
-      setPage(data);
-    });
+    axios
+      .get(`${BASE_URL}/movies?size=12&page=${pageNumber}&sort=title`)
+      .then((resp) => {
+        const data = resp.data as MoviePage;
+        setPage(data);
+      });
   }, [pageNumber]);
+
+  const handlePageChange = (newPageNumber: number) => {
+    setPageNumber(newPageNumber);
+  };
 
   return (
     <>
-      <Pagination />
+      <Pagination page={page} onChange={handlePageChange} />
       <div className="container">
         <div className="row">
           {page.content.map((movie) => (
