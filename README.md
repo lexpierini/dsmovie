@@ -18,9 +18,9 @@ Application simple d'évaluation de films.
 [Cliquez ici pour voir l'application sur Netlify](https://apierini-dsmovie.netlify.app/)
 
 ## Interface d'utilisateur
-![Home](../master/img/Home.png)
+![Home](../main/img/Home.png)
 
-![Formulaire](../master/img/Form.png)
+![Formulaire](../main/img/Form.png)
 
 #
 ###### Événement promu par l'école DevSuperior
